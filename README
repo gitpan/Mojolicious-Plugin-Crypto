@@ -1,4 +1,4 @@
-Mojolicious-Plugin-Crypto version 0.01
+Mojolicious-Plugin-Crypto
 ======================================
 
 The README is used to introduce the module and provide instructions on
@@ -25,7 +25,10 @@ DEPENDENCIES
 
 This module requires these other modules and libraries:
 
-  blah blah blah blu blu blu
+ Mojolicious
+ Crypt::CBC
+ Crypt::OpenSSL::AES
+ CryptX 
 
 COPYRIGHT AND LICENCE
 

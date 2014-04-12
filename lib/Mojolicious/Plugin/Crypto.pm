@@ -1,6 +1,6 @@
 package Mojolicious::Plugin::Crypto;
 {
-  $Mojolicious::Plugin::Crypto::VERSION = '0.04';
+  $Mojolicious::Plugin::Crypto::VERSION = '0.05';
 }
 
 use Crypt::CBC;
@@ -178,26 +178,76 @@ Hash/Digest Functions - SHA*, MD*, Whirlpool, CHAES, RIPEMD*, Tiger192
 
 You can use this plugin in order to encrypt and decrypt using one of these algorithms: 
 
-=over 4
+=over
 
-=item * B<AES (aka Rijndael)>
-=item * B<Blowfish>
-=item * B<DES>
-=item * B<DES_EDE (aka Triple-DES, 3DES)>
-=item * B<IDEA>
-=item * B<TWOFISH>
-=item * B<XTEA>
-=item * B<ANUBIS>
-=item * B<CAMELLIA>
-=item * B<KASUMI>
-=item * B<KHAZAD>
-=item * B<NOEKEON>
-=item * B<MULTI2>
-=item * B<RC2>
-=item * B<RC5>
-=item * B<RC6>
+=item * 
 
-=head1 USAGE
+B<AES (aka Rijndael)>
+
+=item * 
+
+B<Blowfish>
+
+=item * 
+
+B<DES>
+
+=item * 
+
+B<DES_EDE (aka Triple-DES, 3DES)>
+
+=item * 
+
+B<IDEA>
+
+=item * 
+
+B<TWOFISH>
+
+=item * 
+
+B<XTEA>
+
+=item * 
+
+B<ANUBIS>
+
+=item * 
+
+B<CAMELLIA>
+
+=item * 
+
+B<KASUMI>
+
+=item * 
+
+B<KHAZAD>
+
+=item * 
+
+B<NOEKEON>
+
+=item * 
+
+B<MULTI2>
+
+=item * 
+
+B<RC2>
+
+=item * 
+
+B<RC5>
+
+=item * 
+
+B<RC6>
+
+=back
+
+
+=head1 Symmetric Algorithms USAGE
 
 =head2 crypt_[ALGO_NAME]() 
   
@@ -235,49 +285,111 @@ and the same for decrypt functions (please make the effort to put "de" in front 
 
 =over 4
 
-=item 1 L<crypt_des_ede()>
-=item 2 L<crypt_3des()>,
-=item 3 L<crypt_tripple_des()>
+=item 1 
+
+B<crypt_des_ede()>
+
+=item 2 
+
+B<crypt_3des()>
+
+=item 3 
+
+B<crypt_tripple_des()>
+
+=back
 
 =head2 nested calls
 
 =over 4
 
-=item * B<Crypt>
+=item * 
+
+B<Crypt>
 
 =back 
 
 ($crypted, $key) = app->crypt_xtea(app->crypt_twofish(app->crypt_idea(app->crypt_3des(app->crypt_blowfish(app->crypt_aes($super_plain,$super_secret))))));
 
-=item * B<Decrypt>
+=over 4
+
+=item * 
+
+B<Decrypt>
 
 =back
 
 ($plain, $key) = app->decrypt_aes(app->decrypt_blowfish(app->decrypt_3des(app->decrypt_idea(app->decrypt_twofish(app->decrypt_xtea($crypted,$super_secret))))));
 
-=head2 Hash/Digest Functions
+=head1 Hash/Digest Functions
 
 Use this plugin in order to calculate digest through this algorithms:
 
-=over 4
+=over
 
-=item * B<SHA1>
-=item * B<SHA224>
-=item * B<SHA256>
-=item * B<SHA384>
-=item * B<SHA512>
-=item * B<MD2>
-=item * B<MD4>
-=item * B<MD5>
-=item * B<Whirlpool>
-=item * B<CHAES>
-=item * B<RIPEMD128>
-=item * B<RIPEMD160>
-=item * B<RIPEMD256>
-=item * B<RIPEMD320>
-=item * B<Tiger192>
+=item * 
 
-=head1 USAGE
+B<SHA1>
+
+=item * 
+
+B<SHA224>
+
+=item * 
+
+B<SHA256>
+
+=item * 
+
+B<SHA384>
+
+=item * 
+
+B<SHA512>
+
+=item * 
+
+B<MD2>
+
+=item * 
+
+B<MD4>
+
+=item * 
+
+B<MD5>
+
+=item * 
+
+B<Whirlpool>
+
+=item * 
+
+B<CHAES>
+
+=item * 
+
+B<RIPEMD128>
+
+=item * 
+
+B<RIPEMD160>
+
+=item * 
+
+B<RIPEMD256>
+
+=item * 
+  
+B<RIPEMD320>
+
+=item * 
+  
+B<Tiger192>
+
+=back
+
+=head1 Hash/Digest Functions USAGE
 
 =head2 [ALGO_NAME]() 
 
@@ -310,7 +422,6 @@ Example: app->sha256_file_b64();
 =head2 [ALGO_NAME]_file_b64u([FILENAME|FILEHANDLE])
 
 Example: app->sha256_file_b64u();
-
 
 =head1 Dummy example using Mojolicious::Lite
 
@@ -377,18 +488,24 @@ Example: app->sha256_file_b64u();
 
 =head1 TODO
 
-=over 4
+=over
 
-=item * Random numbers generator
-=item * Asymmetric algorithms
-=item * Avoiding to load all modules but just what you need
+=item * 
+
+Random numbers generator
+
+=item * 
+
+Asymmetric algorithms
+
+=back
 
 =head1 SUPPORT
 
 Write me if you need some help and feel free to improve it. 
-You can find me on irc freenode sometimes. 
-
 Github: http://git.io/lQl5cA
+
+@nemux_ 
 
 =head1 AUTHOR
 
@@ -411,7 +528,7 @@ LICENSE file included with this module.
 
 =head1 SEE ALSO
 
-perl(1).
+perl(1). L<CryptX>
 
 =cut
 

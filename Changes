@@ -21,4 +21,10 @@ Revision history for Perl extension Mojolicious::Plugin::Crypto.
       RC5
       RC6
       - Changed return values of decrypt() and crypt() functions in order to make a nested calls
+     
+0.03 Wed Apr 1 00:36:14 2014
+      - Some fix on doc
+
+0.04 Sat Apr 12 19:25:00 2014
+      - Add Hash/Digest functions support
       

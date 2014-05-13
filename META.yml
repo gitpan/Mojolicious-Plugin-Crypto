@@ -20,4 +20,5 @@ no_index:
 requires:
   Crypt::CBC: 2.33
   CryptX: 0.021
-version: 0.09
+  Mojolicious: 4.99
+version: 0.10

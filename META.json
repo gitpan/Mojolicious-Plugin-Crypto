@@ -33,10 +33,11 @@
       "runtime" : {
          "requires" : {
             "Crypt::CBC" : "2.33",
-            "CryptX" : "0.021"
+            "CryptX" : "0.021",
+            "Mojolicious" : "4.99"
          }
       }
    },
    "release_status" : "stable",
-   "version" : "0.09"
+   "version" : "0.10"
 }

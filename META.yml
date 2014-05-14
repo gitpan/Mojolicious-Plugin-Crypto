@@ -21,4 +21,4 @@ requires:
   Crypt::CBC: 2.33
   CryptX: 0.021
   Mojolicious: 4.99
-version: 0.10
+version: 0.11

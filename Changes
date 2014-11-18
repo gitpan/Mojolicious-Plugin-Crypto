@@ -48,3 +48,7 @@ Revision history for Perl extension Mojolicious::Plugin::Crypto.
 
 0.11 Wed May 14 08:48:00 2014
       - Fix - remove support for IDEA
+
+0.12 Tue Nov 18 18:02:31 2014
+      - Fix
+

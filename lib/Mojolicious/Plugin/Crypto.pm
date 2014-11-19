@@ -1,6 +1,6 @@
 package Mojolicious::Plugin::Crypto;
 {
-    $Mojolicious::Plugin::Crypto::VERSION = '0.12';
+    $Mojolicious::Plugin::Crypto::VERSION = '0.13';
 }
 use Mojo::Base 'Mojolicious::Plugin';
 use Mojo::Util;
@@ -8,7 +8,8 @@ use Mojo::Loader;
 use Crypt::CBC;
 use Crypt::PRNG;
 use Crypt::Cipher;
-no warnings "experimental";
+
+no if $] >= 5.018, warnings => "experimental::smartmatch";
 
 our %symmetric_algo = (
     'aes'        => 'Crypt::Cipher::AES',
